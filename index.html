@@ -1,11 +1,141 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    
-</body>
-</html>
+    <div class="container">
+        <h1>Student Registration Form</h1>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full_name" placeholder="First Name Middle Name Last Name" required>
+            </div>
+            <div class="form-group">
+                <label for="student-number">Student Number</label>
+                <input type="text" id="student-number" name="student_number" placeholder="e.g. 11183021" required>
+            </div>
+            <div class="form-group">
+                <label for="year-level">Year Level</label>
+                <select id="year-level" name="year_level" required>
+                    <option value="" disabled selected>Please Select</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="degree-program">Degree Program</label>
+                <select id="degree-program" name="degree_program" required>
+                    <option value="" disabled selected>Please Select</option>
+                    <option value="bscs">BSc Computer Science</option>
+                    <option value="bsee">BSc Electrical Engineering</option>
+                    <option value="bsme">BSc Mechanical Engineering</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="ex: myname@example.com" required><br>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone_number" placeholder="000-000-0000" required><br>
+            </div>
+            <div class="form-group">
+                <label for="network-provider">Network Provider</label>
+                <select id="network-provider" name="network_provider" required>
+                    <option value="" disabled selected>Please Select</option>
+                    <option value="provider1">Provider 1</option>
+                    <option value="provider2">Provider 2</option>
+                    <option value="provider3">Provider 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="birth-date">Birth Date</label>
+                <div class="inline-group">
+                    <div class="inline-item">
+                        <select id="birth-month" name="birth_month" required>
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <!-- Add other months here -->
+                        </select>
+                    </div>
+                    <div class="inline-item">
+                        <select id="birth-day" name="birth_day" required>
+                            <option value="" disabled selected>Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <!-- Add other days here -->
+                        </select>
+                    </div>
+                    <div class="inline-item">
+                        <select id="birth-year" name="birth_year" required>
+                            <option value="" disabled selected>Year</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <!-- Add other years here -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="present-address">Present Address</label><br>
+                <input type="text" id="present-address" name="present_address" placeholder="Street Address" required><br>
+                <input type="text" name="present_address_line2" placeholder="Street Address Line 2"><br>
+                <div class="inline-group">
+                    <div class="inline-item">
+                        <input type="text" name="present_city" placeholder="City" required><br>
+                    </div>
+                    <div class="inline-item">
+                        <input type="text" name="present_state" placeholder="State / Province" required><br>
+                    </div>
+                </div>
+                <input type="text" name="present_postal" placeholder="Postal / Zip Code" required><br>
+                <input type="text" name="present_country" placeholder="Country" required><br>
+            </div>
+            <div class="form-group">
+                <label for="permanent-address">Permanent Address</label>
+                <input type="text" id="permanent-address" name="permanent_address" placeholder="Street Address" required>
+                <input type="text" name="permanent_address_line2" placeholder="Street Address Line 2">
+                <div class="inline-group">
+                    <div class="inline-item">
+                        <input type="text" name="permanent_city" placeholder="City" required>
+                    </div>
+                    <div class="inline-item">
+                        <input type="text" name="permanent_state" placeholder="State / Province" required>
+                    </div>
+                </div>
+                <input type="text" name="permanent_postal" placeholder="Postal / Zip Code" required>
+                <input type="text" name="permanent_country" placeholder="Country" required>
+            </div>
+            <div class="form-group">
+                <label for="emergency-contact">Emergency Contact</label>
+                <input type="text" id="emergency-contact" name="emergency_contact" placeholder="First Name Last Name" required>
+                <input type="text" name="emergency_relationship" placeholder="Relationship (e.g. Father, Mother, etc.)" required>
+                <input type="text" name="emergency_address" placeholder="Address Of Person To Contact In Case Of Emergency" required>
+                <input type="text" name="emergency_address_line2" placeholder="Street Address Line 2">
+                <div class="inline-group">
+                    <div class="inline-item">
+                        <input type="text" name="emergency_city" placeholder="City" required>
+                    </div>
+                    <div class="inline-item">
+                        <input type="text" name="emergency_state" placeholder="State / Province" required>
+                    </div>
+                </div>
+                <input type="text" name="emergency_postal" placeholder="Postal / Zip Code" required>
+                <input type="text" name="emergency_country" placeholder="Country" required>
+                <input type="tel" name="emergency_phone" placeholder="Phone Number Of Person To Contact In Case Of Emergency" required>
+                <input type="email" name="emergency_email" placeholder="Email Of Person To Contact In Case Of Emergency" required>
+            </div>
+            <div class="form-group">
+                <label for="high-school-name
