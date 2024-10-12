@@ -9,6 +9,7 @@
                 confirmationHTML += `<p><strong>${key.replace('_', ' ').toUpperCase()}:</strong> ${value}</p>`;
             }
             
+            
             document.getElementById('confirmation-details').innerHTML = confirmationHTML;
             document.getElementById('confirmation-screen').style.display = 'block';
         });
