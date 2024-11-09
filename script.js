@@ -1,7 +1,6 @@
-
-        document.getElementById('registration-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
+//new
+         document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();    
             const formData = new FormData(this);
             let confirmationHTML = '<h3>Submitted Information:</h3>';
             
